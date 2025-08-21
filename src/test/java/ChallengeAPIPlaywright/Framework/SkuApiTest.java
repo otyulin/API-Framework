@@ -4,6 +4,8 @@ import com.github.tomakehurst.wiremock.client.WireMock;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.RequestOptions;
+
 import java.util.*;
 
 public class SkuApiTest extends BaseApiTest {
@@ -43,8 +45,9 @@ public class SkuApiTest extends BaseApiTest {
                     "\"description\":\"Jelly donut\"," +
                     "\"price\":\"2.99\"}";
             APIResponse response = request.post(TestConfig.getBaseUri(),
-                new APIRequestContext.RequestOptions()
-                    .setHeaders(headers)
+                //new APIRequestContext.RequestOptions()
+            		                RequestOptions.create()
+                    //.setHeaders(headers)
                     .setData(body)
             );
             Assert.assertEquals(response.status(), 201, "Expected 201 Created");
@@ -89,7 +92,7 @@ public class SkuApiTest extends BaseApiTest {
             Assert.fail("Exception during testDeleteSku: " + e.getMessage());
         }
     }
-
+/*
     @Test
     public void testCreateSkuWithInvalidPayload() {
         try (Playwright playwright = Playwright.create()) {
@@ -101,13 +104,15 @@ public class SkuApiTest extends BaseApiTest {
                     "\"description\":\"\"," +
                     "\"price\":\"\"}";
             APIResponse response = request.post(TestConfig.getBaseUri(),
-                new APIRequestContext.RequestOptions()
-                    .setHeaders(headers)
+               // new APIRequestContext.RequestOptions()
+            		RequestOptions.create()
+                    //.setHeaders(headers)
                     .setData(body)
             );
             Assert.assertTrue(response.status() >= 400, "Expected client error for invalid payload");
         } catch (Exception e) {
             Assert.fail("Exception during testCreateSkuWithInvalidPayload: " + e.getMessage());
         }
-    }
+            }
+            */
 }

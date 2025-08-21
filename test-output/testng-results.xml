@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-08-21T12:25:35 CDT" name="API Framework Suite" finished-at="2025-08-21T12:25:49 CDT" duration-ms="14757">
+    <groups>
+    </groups>
+    <test started-at="2025-08-21T12:25:35 CDT" name="SKU API Tests" finished-at="2025-08-21T12:25:49 CDT" duration-ms="14757">
+      <class name="ChallengeAPIPlaywright.Framework.SkuApiTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:ChallengeAPIPlaywright.Framework.SkuApiTest@4afcd809]" started-at="2025-08-21T12:25:35 CDT" name="setUp" finished-at="2025-08-21T12:25:35 CDT" duration-ms="754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testCreateSku()[pri:0, instance:ChallengeAPIPlaywright.Framework.SkuApiTest@4afcd809]" started-at="2025-08-21T12:25:35 CDT" name="testCreateSku" finished-at="2025-08-21T12:25:47 CDT" duration-ms="11930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCreateSku -->
+        <test-method signature="testDeleteSku()[pri:0, instance:ChallengeAPIPlaywright.Framework.SkuApiTest@4afcd809]" started-at="2025-08-21T12:25:47 CDT" name="testDeleteSku" finished-at="2025-08-21T12:25:48 CDT" duration-ms="682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testDeleteSku -->
+        <test-method signature="testGetAllSkus()[pri:0, instance:ChallengeAPIPlaywright.Framework.SkuApiTest@4afcd809]" started-at="2025-08-21T12:25:48 CDT" name="testGetAllSkus" finished-at="2025-08-21T12:25:49 CDT" duration-ms="635" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAllSkus -->
+        <test-method signature="testGetSkuById()[pri:0, instance:ChallengeAPIPlaywright.Framework.SkuApiTest@4afcd809]" started-at="2025-08-21T12:25:49 CDT" name="testGetSkuById" finished-at="2025-08-21T12:25:49 CDT" duration-ms="702" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetSkuById -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:ChallengeAPIPlaywright.Framework.SkuApiTest@4afcd809]" started-at="2025-08-21T12:25:49 CDT" name="tearDown" finished-at="2025-08-21T12:25:49 CDT" duration-ms="10" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- ChallengeAPIPlaywright.Framework.SkuApiTest -->
+    </test> <!-- SKU API Tests -->
+  </suite> <!-- API Framework Suite -->
+</testng-results>
