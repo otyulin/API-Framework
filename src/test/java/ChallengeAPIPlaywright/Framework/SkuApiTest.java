@@ -38,16 +38,13 @@ public class SkuApiTest extends BaseApiTest {
     public void testCreateSku() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
-            Map<String, String> headers = new HashMap<>();
-            headers.put("Content-Type", "application/json");
             String body = "{" +
                     "\"sku\":\"berliner\"," +
                     "\"description\":\"Jelly donut\"," +
                     "\"price\":\"2.99\"}";
-            APIResponse response = request.post(TestConfig.getBaseUri(),
-                //new APIRequestContext.RequestOptions()
-            		                RequestOptions.create()
-                    //.setHeaders(headers)
+            APIResponse response = request.post(TestConfig.getBaseUri(),               
+					RequestOptions.create()
+					.setHeader("Content-Type", "application/json")
                     .setData(body)
             );
             Assert.assertEquals(response.status(), 201, "Expected 201 Created");
@@ -92,27 +89,30 @@ public class SkuApiTest extends BaseApiTest {
             Assert.fail("Exception during testDeleteSku: " + e.getMessage());
         }
     }
-/*
+
     @Test
     public void testCreateSkuWithInvalidPayload() {
-        try (Playwright playwright = Playwright.create()) {
+    	try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
-            Map<String, String> headers = new HashMap<>();
-            headers.put("Content-Type", "application/json");
+               // Intentionally sending an invalid payload
             String body = "{" +
                     "\"sku\":\"\"," +
                     "\"description\":\"\"," +
-                    "\"price\":\"\"}";
-            APIResponse response = request.post(TestConfig.getBaseUri(),
-               // new APIRequestContext.RequestOptions()
+                    "\"price\":\"\"}";                    
+            APIResponse response = request.post(TestConfig.getBaseUri(),               
             		RequestOptions.create()
-                    //.setHeaders(headers)
+                    .setHeader("Content-Type", "application/json")
                     .setData(body)
             );
+            System.out.println("******  Response Status *** testCreateSkuWithInvalidPayload: " + response.status());
             Assert.assertTrue(response.status() >= 400, "Expected client error for invalid payload");
-        } catch (Exception e) {
+                        
+        } catch (Exception e) 
+        
+        {
             Assert.fail("Exception during testCreateSkuWithInvalidPayload: " + e.getMessage());
         }
-            }
-            */
+    }
+            
+    
 }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [API Framework Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="SKU API Tests(failed)">
+    <classes>
+      <class name="ChallengeAPIPlaywright.Framework.SkuApiTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testCreateSkuWithInvalidPayload"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- ChallengeAPIPlaywright.Framework.SkuApiTest -->
+    </classes>
+  </test> <!-- SKU API Tests(failed) -->
+</suite> <!-- Failed suite [API Framework Suite] -->
