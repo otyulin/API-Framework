@@ -1,0 +1,53 @@
+As an expert in test automation using java, Maven, Playwright and other  libraries and tools please respond to this exercise with updated project meets the requirements below to show skills in software test planning and technical execution.
+
+Requirements:
+
+1.      Framework should support two modes: production – using provided URI and development when API is not available and should be mocked using WireMock or other solution. Mode selection option should be provided.
+
+2.      Design an approach to testing API that described below in anticipation of release to consumers and create a readme.md that outlines the service under test and the intentions of testing.
+
+3.      Pay attention to quality of your documentation, and the technical correctness and transparency of the tests. This test project should be relatively comprehensive and should cover normal and abnormal ways in which a consuming system would connect to and use this service.
+
+4.      Tests should cover sympathetic cases and edge cases and should run from a single command.
+
+5.      Test code should be developed in a manner that is inspired by acceptance test driven development.
+
+6.      Build the tests anticipating that the APIs are not yet deployed and that tests will be deployed prior to the API.
+
+7.      This will give us a red->green->refactor on the API that will let developers know if the first deployment of their code is working and quick feedback showing if subsequent changes are valid.
+
+8.      The tests should communicate failures in a simple and understandable manner which communicates details of the service’s failure and not the failure of the test. So they should have assertion steps.
+
+ 
+
+• The API
+
+The development team for a retail organization plans to build an API intended to be used for the maintenance of Stock Keeping Unit identifiers (SKUs) which are used to identify and track the items the company has for sale.
+
+This API will implement the basic CRUD operations:
+
+Create and Update operations are through HTTP POSTs
+
+POST https://example.com/api/skus
+
+Posts expect a body with SKU, Description and Price
+
+{
+
+"sku":"berliner",
+
+"description": "Jelly donut",
+
+"price":"2.99"
+
+}
+
+Read operations are through HTTP GETs
+
+GET https://example.com/api/skus
+
+GET https://example.com/api/skus{id}
+
+Delete operations are through HTTP DELETEs
+
+DELETE https://example.com/api/skus{id}

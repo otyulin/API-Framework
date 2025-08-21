@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="API Framework Suite">
+    <test name="SKU API Tests">
+        <classes>
+            <class name="ChallengeAPIPlaywright.Framework.SkuApiTest"/>
+        </classes>
+    </test>
+</suite>
