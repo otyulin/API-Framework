@@ -5,9 +5,18 @@
     <classes>
       <class name="ChallengeAPIPlaywright.Framework.SkuApiTest">
         <methods>
+          <include name="testCreateSkuEmptyBody"/>
+          <include name="testCreateSkuLongDescription"/>
+          <include name="testCreateSkuDuplicate"/>
           <include name="tearDown"/>
-          <include name="testCreateSkuWithInvalidPayload"/>
+          <include name="testUnauthorizedAccess"/>
+          <include name="testCreateSkuMissingPrice"/>
+          <include name="testDeleteSkuInvalidIdFormat"/>
+          <include name="testCreateSkuMissingDescription"/>
           <include name="setUp"/>
+          <include name="testDeleteThenGetOrUpdate"/>
+          <include name="testCreateSku"/>
+          <include name="testUpdateSkuMissingSku"/>
         </methods>
       </class> <!-- ChallengeAPIPlaywright.Framework.SkuApiTest -->
     </classes>

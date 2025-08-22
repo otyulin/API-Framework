@@ -8,48 +8,63 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">17,944</td><td></td><td></td></tr>
+<tr><th colspan="8">API Framework Suite</th></tr>
+<tr><td><a href="#t0">SKU API Tests</a></td><td class="num">13</td><td class="num">0</td><td class="num">0</td><td class="num attn">10</td><td class="num">27,871</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">ChallengeAPIPlaywright.Framework.SkuApiTest</td><td><a href="#m0">testCreateSkuWithInvalidPayload</a></td><td rowspan="1">1755811100739</td><td rowspan="1">835</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="4">ChallengeAPIPlaywright.Framework.SkuApiTest</td><td><a href="#m1">testCreateSku</a></td><td rowspan="1">1755811087689</td><td rowspan="1">13033</td></tr><tr class="passedeven"><td><a href="#m2">testDeleteSku</a></td><td rowspan="1">1755811101578</td><td rowspan="1">922</td></tr><tr class="passedeven"><td><a href="#m3">testGetAllSkus</a></td><td rowspan="1">1755811102503</td><td rowspan="1">867</td></tr><tr class="passedeven"><td><a href="#m4">testGetSkuById</a></td><td rowspan="1">1755811103372</td><td rowspan="1">924</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">API Framework Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SKU API Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="10">ChallengeAPIPlaywright.Framework.SkuApiTest</td><td><a href="#m0">testCreateSku</a></td><td rowspan="1">1755820512871</td><td rowspan="1">12429</td></tr><tr class="failedeven"><td><a href="#m1">testCreateSkuDuplicate</a></td><td rowspan="1">1755820525304</td><td rowspan="1">658</td></tr><tr class="failedeven"><td><a href="#m2">testCreateSkuEmptyBody</a></td><td rowspan="1">1755820525963</td><td rowspan="1">627</td></tr><tr class="failedeven"><td><a href="#m3">testCreateSkuLongDescription</a></td><td rowspan="1">1755820527244</td><td rowspan="1">613</td></tr><tr class="failedeven"><td><a href="#m4">testCreateSkuMissingDescription</a></td><td rowspan="1">1755820527860</td><td rowspan="1">626</td></tr><tr class="failedeven"><td><a href="#m5">testCreateSkuMissingPrice</a></td><td rowspan="1">1755820528487</td><td rowspan="1">693</td></tr><tr class="failedeven"><td><a href="#m6">testDeleteSkuInvalidIdFormat</a></td><td rowspan="1">1755820531668</td><td rowspan="1">663</td></tr><tr class="failedeven"><td><a href="#m7">testDeleteThenGetOrUpdate</a></td><td rowspan="1">1755820532990</td><td rowspan="1">628</td></tr><tr class="failedeven"><td><a href="#m8">testUnauthorizedAccess</a></td><td rowspan="1">1755820535634</td><td rowspan="1">616</td></tr><tr class="failedeven"><td><a href="#m9">testUpdateSkuMissingSku</a></td><td rowspan="1">1755820538186</td><td rowspan="1">690</td></tr><tr><th colspan="4">SKU API Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="13">ChallengeAPIPlaywright.Framework.SkuApiTest</td><td><a href="#m10">testCreateSkuInvalidPrice</a></td><td rowspan="1">1755820526591</td><td rowspan="1">651</td></tr><tr class="passedeven"><td><a href="#m11">testCreateSkuMissingSku</a></td><td rowspan="1">1755820529181</td><td rowspan="1">618</td></tr><tr class="passedeven"><td><a href="#m12">testCreateSkuWithExtraFields</a></td><td rowspan="1">1755820529800</td><td rowspan="1">602</td></tr><tr class="passedeven"><td><a href="#m13">testCreateSkuWithInvalidPayload</a></td><td rowspan="1">1755820530403</td><td rowspan="1">659</td></tr><tr class="passedeven"><td><a href="#m14">testDeleteSku</a></td><td rowspan="1">1755820531064</td><td rowspan="1">604</td></tr><tr class="passedeven"><td><a href="#m15">testDeleteSkuNonExistent</a></td><td rowspan="1">1755820532332</td><td rowspan="1">656</td></tr><tr class="passedeven"><td><a href="#m16">testGetAllSkus</a></td><td rowspan="1">1755820533619</td><td rowspan="1">616</td></tr><tr class="passedeven"><td><a href="#m17">testGetSkuById</a></td><td rowspan="1">1755820534236</td><td rowspan="1">699</td></tr><tr class="passedeven"><td><a href="#m18">testGetSkuByNonExistentId</a></td><td rowspan="1">1755820534936</td><td rowspan="1">698</td></tr><tr class="passedeven"><td><a href="#m19">testUnsupportedHttpMethodPatch</a></td><td rowspan="1">1755820536251</td><td rowspan="1">617</td></tr><tr class="passedeven"><td><a href="#m20">testUnsupportedHttpMethodPut</a></td><td rowspan="1">1755820536868</td><td rowspan="1">650</td></tr><tr class="passedeven"><td><a href="#m21">testUpdateSkuInvalidPrice</a></td><td rowspan="1">1755820537519</td><td rowspan="1">666</td></tr><tr class="passedeven"><td><a href="#m22">testUpdateSkuValid</a></td><td rowspan="1">1755820538877</td><td rowspan="1">810</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuWithInvalidPayload</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected client error for invalid payload expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at ChallengeAPIPlaywright.Framework.SkuApiTest.testCreateSkuWithInvalidPayload(SkuApiTest.java:115)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+<h2>SKU API Tests</h2><h3 id="m0">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSku</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 201 Created expected [201] but found [200]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testCreateSku(SkuApiTest.java:135)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:739)
-	at org.testng.TestRunner.run(TestRunner.java:614)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSku</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">ChallengeAPIPlaywright.Framework.SkuApiTest#testDeleteSku</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">ChallengeAPIPlaywright.Framework.SkuApiTest#testGetAllSkus</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">ChallengeAPIPlaywright.Framework.SkuApiTest#testGetSkuById</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 33 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuDuplicate</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [409] but found [200]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testCreateSkuDuplicate(SkuApiTest.java:279)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuEmptyBody</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testCreateSkuEmptyBody(SkuApiTest.java:332)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuLongDescription</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [400] but found [200]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testCreateSkuLongDescription(SkuApiTest.java:317)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuMissingDescription</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testCreateSkuMissingDescription(SkuApiTest.java:234)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuMissingPrice</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testCreateSkuMissingPrice(SkuApiTest.java:253)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">ChallengeAPIPlaywright.Framework.SkuApiTest#testDeleteSkuInvalidIdFormat</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [400] but found [404]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testDeleteSkuInvalidIdFormat(SkuApiTest.java:429)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">ChallengeAPIPlaywright.Framework.SkuApiTest#testDeleteThenGetOrUpdate</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [404] but found [201]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testDeleteThenGetOrUpdate(SkuApiTest.java:529)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">ChallengeAPIPlaywright.Framework.SkuApiTest#testUnauthorizedAccess</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [401] but found [200]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testUnauthorizedAccess(SkuApiTest.java:503)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">ChallengeAPIPlaywright.Framework.SkuApiTest#testUpdateSkuMissingSku</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at ChallengeAPIPlaywright.Framework.SkuApiTest.testUpdateSkuMissingSku(SkuApiTest.java:404)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuInvalidPrice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuMissingSku</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuWithExtraFields</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">ChallengeAPIPlaywright.Framework.SkuApiTest#testCreateSkuWithInvalidPayload</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">ChallengeAPIPlaywright.Framework.SkuApiTest#testDeleteSku</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">ChallengeAPIPlaywright.Framework.SkuApiTest#testDeleteSkuNonExistent</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">ChallengeAPIPlaywright.Framework.SkuApiTest#testGetAllSkus</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">ChallengeAPIPlaywright.Framework.SkuApiTest#testGetSkuById</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">ChallengeAPIPlaywright.Framework.SkuApiTest#testGetSkuByNonExistentId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">ChallengeAPIPlaywright.Framework.SkuApiTest#testUnsupportedHttpMethodPatch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">ChallengeAPIPlaywright.Framework.SkuApiTest#testUnsupportedHttpMethodPut</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">ChallengeAPIPlaywright.Framework.SkuApiTest#testUpdateSkuInvalidPrice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">ChallengeAPIPlaywright.Framework.SkuApiTest#testUpdateSkuValid</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
