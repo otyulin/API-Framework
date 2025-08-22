@@ -50,6 +50,7 @@ This project provides automated acceptance and regression tests for a retail SKU
   ```
   mvn test
   ```
+- **More options to Run tests provided using testng.xml**
 
 ## Test Intentions
 - Validate all CRUD operations for SKUs.
