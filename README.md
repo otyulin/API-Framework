@@ -35,15 +35,21 @@ This project provides automated acceptance and regression tests for a retail SKU
   mvn test -Dtest.mode=PRODUCTION
   ```
   - To run only Smoke tests:  
+  ```
   mvn test -Dtest.group=Smoke
-
+  ```
 - To run only Regression tests:  
+```
   mvn test -Dtest.group=Regression
-
-- To run all tests (default):  
+  ```  
+- To run all tests (default): 
+``` 
   mvn test -Dtest.group=all  
+  ```
   or simply  
+  ```
   mvn test
+  ```
 
 ## Test Intentions
 - Validate all CRUD operations for SKUs.
