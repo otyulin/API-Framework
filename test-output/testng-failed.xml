@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [API Framework Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="SKU API Tests(failed)">
+<suite thread-count="4" parallel="tests" name="Failed suite [API Framework Suite]" guice-stage="DEVELOPMENT" verbose="6">
+  <test thread-count="4" parallel="tests" name="SKU API Tests(failed)" verbose="6">
     <classes>
       <class name="ChallengeAPIPlaywright.Framework.SkuApiTest">
         <methods>

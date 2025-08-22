@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="API Framework Suite">
+<suite name="API Framework Suite"  parallel="tests" thread-count="4" verbose="6">
+    <groups>
+      <run>
+        <include name="${test.group}"/>
+      </run>
+    </groups>
     <test name="SKU API Tests">
         <classes>
             <class name="ChallengeAPIPlaywright.Framework.SkuApiTest"/>

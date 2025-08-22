@@ -119,7 +119,7 @@ public class SkuApiTest extends BaseApiTest {
             .willReturn(WireMock.aResponse().withStatus(404).withBody("{\"error\":\"SKU not found\"}")));
     }
 
-    @Test
+    @Test(groups = "Smoke")
     public void testCreateSku() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -138,7 +138,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Smoke")
     public void testGetAllSkus() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -150,7 +150,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Smoke")
     public void testGetSkuById() {
         String skuId = "berliner";
         try (Playwright playwright = Playwright.create()) {
@@ -163,7 +163,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Smoke")
     public void testDeleteSku() {
         String skuId = "berliner";
         try (Playwright playwright = Playwright.create()) {
@@ -175,7 +175,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testCreateSkuWithInvalidPayload() {
     	try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -196,7 +196,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
             
-    @Test
+    @Test(groups = "Regression")
     public void testCreateSkuMissingSku() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -215,7 +215,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testCreateSkuMissingDescription() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -234,7 +234,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testCreateSkuMissingPrice() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -253,7 +253,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testCreateSkuDuplicate() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -280,7 +280,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testCreateSkuInvalidPrice() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -300,7 +300,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testCreateSkuLongDescription() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -318,7 +318,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testCreateSkuEmptyBody() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -332,7 +332,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testGetSkuByNonExistentId() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -345,7 +345,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testUpdateSkuValid() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -365,7 +365,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testUpdateSkuInvalidPrice() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -385,7 +385,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testUpdateSkuMissingSku() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -404,7 +404,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testDeleteSkuNonExistent() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -417,7 +417,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testDeleteSkuInvalidIdFormat() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -430,7 +430,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testUnsupportedHttpMethodPut() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -450,7 +450,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testUnsupportedHttpMethodPatch() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -470,7 +470,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testCreateSkuWithExtraFields() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -491,7 +491,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = "Regression")
     public void testUnauthorizedAccess() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
@@ -504,7 +504,7 @@ public class SkuApiTest extends BaseApiTest {
         }
     }
 
-    @Test
+    @Test(groups = {"Regression", "Smoke"})
     public void testDeleteThenGetOrUpdate() {
         try (Playwright playwright = Playwright.create()) {
             APIRequestContext request = playwright.request().newContext();
