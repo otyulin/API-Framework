@@ -46,10 +46,7 @@ This project provides automated acceptance and regression tests for a retail SKU
 ``` 
   mvn test -Dtest.group=all  
   ```
-  or simply  
-  ```
-  mvn test
-  ```
+  
 - **More options to Run tests provided using testng.xml**
 
 ## Test Intentions

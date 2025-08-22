@@ -2,21 +2,38 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="4" parallel="tests" name="Failed suite [API Framework Suite]" guice-stage="DEVELOPMENT" verbose="6">
   <test thread-count="4" parallel="tests" name="SKU API Tests(failed)" verbose="6">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+        <include name="Regression"/>
+      </run>
+    </groups>
     <classes>
       <class name="ChallengeAPIPlaywright.Framework.SkuApiTest">
         <methods>
+          <include name="testCreateSkuDuplicate"/>
+          <include name="testGetSkuByNonExistentId"/>
+          <include name="testCreateSkuMissingPrice"/>
+          <include name="testUnsupportedHttpMethodPatch"/>
+          <include name="testDeleteSkuInvalidIdFormat"/>
+          <include name="testDeleteSku"/>
+          <include name="testDeleteThenGetOrUpdate"/>
+          <include name="testGetAllSkus"/>
+          <include name="testUnsupportedHttpMethodPut"/>
           <include name="testCreateSkuEmptyBody"/>
           <include name="testCreateSkuLongDescription"/>
-          <include name="testCreateSkuDuplicate"/>
-          <include name="tearDown"/>
+          <include name="testUpdateSkuValid"/>
+          <include name="testCreateSkuMissingSku"/>
+          <include name="testDeleteSkuNonExistent"/>
           <include name="testUnauthorizedAccess"/>
-          <include name="testCreateSkuMissingPrice"/>
-          <include name="testDeleteSkuInvalidIdFormat"/>
+          <include name="testCreateSkuWithExtraFields"/>
+          <include name="testCreateSkuWithInvalidPayload"/>
+          <include name="testGetSkuById"/>
           <include name="testCreateSkuMissingDescription"/>
-          <include name="setUp"/>
-          <include name="testDeleteThenGetOrUpdate"/>
+          <include name="testUpdateSkuInvalidPrice"/>
           <include name="testCreateSku"/>
           <include name="testUpdateSkuMissingSku"/>
+          <include name="testCreateSkuInvalidPrice"/>
         </methods>
       </class> <!-- ChallengeAPIPlaywright.Framework.SkuApiTest -->
     </classes>
